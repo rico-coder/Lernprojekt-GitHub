@@ -23,7 +23,7 @@ Bei der Eingabe der Note wird eine Validierung überprüfen, ob die Note gültig
 ## Motivation
 Meine Motivation ist es, Java zu lernen und Erfahrungen darin zu sammeln, wie man ein Projekt korrekt durchführt.
 In dem Projekt lerne ich die Grundlagen der Programmierung einer Java-Applikation, was wichtig für die Zukunft in meiner Lehre ist.
-Am Schluss eine App zu haben, die ich weiterentwickeln kann und sinnvoll in meinem Alltag benutzen kann, motiviert mich besonders.
+Am Schluss eine Applikation zu haben, die ich weiterentwickeln kann und sinnvoll in meinem Alltag benutzen kann, motiviert mich besonders.
 
 ---
 
