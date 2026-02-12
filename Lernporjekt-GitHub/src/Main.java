@@ -58,7 +58,22 @@ public class Main {
                     System.out.println("Fach nicht gefunden.");
                 }
 
-            }  else if (choice == 0) {
+            } else if (choice == 3) {
+
+                for (Subject subject : school.subjects) {
+                    System.out.println("Fach: " + subject.name);
+                    System.out.println("Durchschnitt: " + subject.average());
+                }
+
+            } else if (choice == 4) {
+
+                if (!school.subjects.isEmpty()) {
+                    System.out.println("Gesamtdurchschnitt: " + school.schoolAverage());
+                } else {
+                    System.out.println("Keine Fächer vorhanden.");
+                }
+
+            } else if (choice == 0) {
                 running = false;
                 System.out.println("Programm beendet.");
             }
