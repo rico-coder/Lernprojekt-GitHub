@@ -30,6 +30,34 @@ public class Main {
 
                 System.out.println("Fach hinzugefügt.");
 
+            } else if (choice == 2) {
+                System.out.println("Fächer:");
+                for (Subject subject : school.subjects){
+                    System.out.println(subject.name);
+                }
+
+                System.out.print("Name des Fachs: ");
+                String subjectName = scanner.nextLine();
+
+                Subject found = null;
+
+                for (Subject subject : school.subjects) {
+                    if (subject.name.equals(subjectName)) {
+                        found = subject;
+                    }
+                }
+
+                if (found != null) {
+                    System.out.print("Note eingeben: ");
+                    float grade = scanner.nextFloat();
+                    scanner.nextLine();
+
+                    found.addGrade(grade);
+                    System.out.println("Note hinzugefügt.");
+                } else {
+                    System.out.println("Fach nicht gefunden.");
+                }
+
             }  else if (choice == 0) {
                 running = false;
                 System.out.println("Programm beendet.");
