@@ -62,6 +62,7 @@ public class Main {
 
                 for (Subject subject : school.subjects) {
                     System.out.println("Fach: " + subject.name);
+                    System.out.println("Noten: " + subject.grades);
                     System.out.println("Durchschnitt: " + subject.average());
                 }
 
