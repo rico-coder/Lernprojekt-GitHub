@@ -14,8 +14,9 @@ public class Main {
             System.out.println("\n--- MENÜ ---");
             System.out.println("1 - Fach hinzufügen");
             System.out.println("2 - Note hinzufügen");
-            System.out.println("3 - Alle Fächer anzeigen");
-            System.out.println("4 - Gesamtdurchschnitt anzeigen");
+            System.out.println("3 - Note löschen");
+            System.out.println("4 - Alle Fächer anzeigen");
+            System.out.println("5 - Gesamtdurchschnitt anzeigen");
             System.out.println("0 - Beenden");
 
             int choice = scanner.nextInt();
@@ -60,13 +61,51 @@ public class Main {
 
             } else if (choice == 3) {
 
+            if (school.subjects.isEmpty()) {
+                System.out.println("Keine Fächer vorhanden.");
+            } else {
+
+                System.out.println("Fächer:");
+                for (Subject subject : school.subjects) {
+                    System.out.println(subject.name);
+                }
+
+                System.out.print("Name des Fachs: ");
+                String subjectName = scanner.nextLine();
+
+                Subject found = null;
+
+                for (Subject subject : school.subjects) {
+                    if (subject.name.equals(subjectName)) {
+                        found = subject;
+                        break;
+                    }
+                }
+
+                if (found != null) {
+
+                    found.showGrades();
+
+                    System.out.print("Index der Note zum Löschen: ");
+                    int index = scanner.nextInt();
+                    scanner.nextLine();
+
+                    found.removeGrade(index);
+
+                } else {
+                    System.out.println("Fach nicht gefunden.");
+                }
+            }
+        }
+        else if (choice == 4) {
+
                 for (Subject subject : school.subjects) {
                     System.out.println("Fach: " + subject.name);
                     System.out.println("Noten: " + subject.grades);
                     System.out.println("Durchschnitt: " + subject.average());
                 }
 
-            } else if (choice == 4) {
+            } else if (choice == 5) {
 
                 if (!school.subjects.isEmpty()) {
                     System.out.println("Gesamtdurchschnitt: " + school.schoolAverage());

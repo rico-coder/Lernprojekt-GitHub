@@ -14,6 +14,26 @@ public class Subject {
         grades.add(grade);
     }
 
+    void removeGrade(int index) {
+        if (index >= 0 && index < grades.size()) {
+            grades.remove(index);
+            System.out.println("Note wurde gelöscht.");
+        } else {
+            System.out.println("Ungültiger Index.");
+        }
+    }
+
+    void showGrades() {
+        if (grades.isEmpty()) {
+            System.out.println("Keine Noten vorhanden.");
+            return;
+        }
+
+        for (int i = 0; i < grades.size(); i++) {
+            System.out.println(i + " - " + grades.get(i));
+        }
+    }
+
     float average() {
         float sum = 0f;
 
