@@ -1,3 +1,11 @@
+/*
+Author: Rico Krenn
+Created on: Wed Feb 4 2026 8:04:36 AM
+Description: Noten
+File: Subject.java
+Workspace: Lernprojekt-GitHub
+*/
+
 import java.util.ArrayList;
 
 public class Subject {

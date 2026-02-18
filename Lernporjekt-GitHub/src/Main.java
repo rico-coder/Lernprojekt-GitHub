@@ -1,3 +1,11 @@
+/*
+Author: Rico Krenn
+Created on: Wed Feb 4 2026 8:03:45 AM
+Description: Noten
+File: Main.java
+Workspace: Lernprojekt-GitHub
+*/
+
 import java.util.Scanner;
 
 public class Main {
